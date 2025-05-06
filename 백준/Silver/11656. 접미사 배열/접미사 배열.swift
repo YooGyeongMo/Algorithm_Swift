@@ -2,14 +2,16 @@ import Foundation
 
 let str = readLine()!
 
-var strArray: [String] = [str]
+var strArray: [Substring] = []
 
-for i in 1..<str.count {
+for i in 0..<str.count {
     let startIndex = str.index(str.startIndex, offsetBy: i)
-    let substring = String(str[startIndex...])
-    strArray.append(substring)
+    strArray.append(str[startIndex...])
+//    print(type(of:str[startIndex...]))
 }
 
 for item in strArray.sorted(){
     print(item)
 }
+
+
