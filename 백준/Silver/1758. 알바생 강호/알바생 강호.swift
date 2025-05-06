@@ -19,9 +19,9 @@ var maxTip = 0
 
 for (idx,tip) in numbers.enumerated() {
     let takeTip = tip - idx
-    if takeTip > 0 {
-        maxTip += takeTip
-    }
+    guard takeTip > 0 else { break} // 뒤에꺼 다 돌필요없음
+    
+    maxTip += takeTip
 }
 
 print(maxTip)
